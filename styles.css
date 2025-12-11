@@ -30,10 +30,14 @@ body{
     background-repeat: no-repeat;
     background-position: top center ;
     background-size: cover;
-
     /* Pode ser feito assim também 
     background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
     */
+
+    height: 100vh;
+    /*O "height" no "body" é importante para ser utilizando toda a altura.Se não for definada , ao altera o tamanho da página aparecerá uma área branca*/
+
+    
 }
 body *{
     font-family: 'Inter', sans-serif;
@@ -156,4 +160,15 @@ footer{
     font-size: 14px;
     padding: 24px 0px;
     color: rgba(255, 255, 255, 0.7);
+}
+
+/* media queries - O que foi feito antes dos "width" o background e de uma forma depois dos "width" é de outra  */
+@media (min-width:700px){
+    :root {
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+
+    .light {
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
 }
